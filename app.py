@@ -9,13 +9,13 @@ from langchain_groq import ChatGroq
 from supabase import create_client, Client
 import json
 
-# Set up environment variables
-os.environ['GROQ_API_KEY'] = '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'
-supabase_url = 'https://isxykyawirffuarbmwsc.supabase.co'  # Full URL without trailing slash
-supabase_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzeHlreWF3aXJmZnVhcmJtd3NjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE0MjE3MTcsImV4cCI6MjAzNjk5NzcxN30.-dUat7yc7wb0-h5R_SmTnX29pWJNGsMxkgyzCfNImhA'  # Use the anon or service_role key
+# Load environment variables
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+SUPABASE_URL = os.getenv('SUPABASE_URL')
+SUPABASE_KEY = os.getenv('SUPABASE_KEY')
 
 # Initialize Supabase client
-supabase: Client = create_client(supabase_url, supabase_key)
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Function to query Supabase for embeddings
 def query_database_with_supabase(query):
@@ -41,7 +41,8 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 # Set up Groq LLM
 chat = ChatGroq(
     temperature=0,
-    model="llama3-70b-8192"
+    model="llama3-70b-8192",
+    api_key=GROQ_API_KEY  # Use environment variable
 )
 
 system = "You are a helpful assistant."
