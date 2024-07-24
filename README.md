@@ -41,3 +41,13 @@ cd nvidia-financial-bot
 mkdir .streamlit
 ```
 
+### Create secrets.toml
+```bash
+nano .streamlit/secrets.toml
+```
+#### Add the following content:
+GROQ_API_KEY = "your-groq-api-key" <\br>
+SUPABASE_URL = "your-supabase-url"
+SUPABASE_KEY = "your-supabase-key"
+NGROK_AUTH_TOKEN = "your-ngrok-auth-token"
+
