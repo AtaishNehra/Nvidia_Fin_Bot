@@ -1,6 +1,7 @@
 # NVIDIA Financial Bot
 
-This project is a Streamlit application that answers questions about NVIDIA's financial data using a pre-built database of financial documents stored in Supabase and leveraging Groq's language model for processing queries.
+This project is a Streamlit application that answers questions about NVIDIA's financial data using a pre-built database of financial documents stored in Supabase and leveraging Groq's language model for processing queries. </br>
+This README file provides a detailed guide on setting up and deploying the NVIDIA Financial Bot application, ensuring that all sensitive information is securely managed.
 
 ## Features
 - Query NVIDIA financial documents.
@@ -84,3 +85,14 @@ streamlit run app.py
 ### Add Secrets
 - In the "Advanced Settings" section, click on "Manage Secrets".
 - Add your secrets in the format:
+
+GROQ_API_KEY="your-groq-api-key" </br>
+SUPABASE_URL="your-supabase-url" </br>
+SUPABASE_KEY="your-supabase-key" </br>
+NGROK_AUTH_TOKEN="your-ngrok-auth-token" </br>
+
+## Deploy
+- Click "Deploy". </br>
+
+## Usage
+Once deployed, you will get a public URL for your app. Share this URL with others to access the app from anywhere.
