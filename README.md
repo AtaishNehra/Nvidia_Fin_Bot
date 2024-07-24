@@ -19,3 +19,25 @@ This project is a Streamlit application that answers questions about NVIDIA's fi
 ```bash
 git clone https://github.com/your-username/nvidia-financial-bot.git
 cd nvidia-financial-bot
+```
+
+## Create API Keys and URLs
+
+### Groq API Key
+- Sign up at [Groq](https://groq.com/) and generate an API key.
+
+### Supabase
+- Sign up at [Supabase](https://supabase.com/) and create a new project.
+- Note down your Supabase URL and API Key.
+- Create a table named `embeddings` with columns `filename`, `text`, and `embedding`.
+
+### Ngrok
+- Sign up at [Ngrok](https://ngrok.com/) and get your auth token.
+
+## Add Secrets to Streamlit
+
+### Create `.streamlit` Directory
+```bash
+mkdir .streamlit
+```
+
