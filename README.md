@@ -51,3 +51,36 @@ SUPABASE_URL = "your-supabase-url" </br>
 SUPABASE_KEY = "your-supabase-key" </br>
 NGROK_AUTH_TOKEN = "your-ngrok-auth-token" </br>
 
+## Install Dependencies 
+
+### Create a requirements.txt file with the following content:
+
+streamlit </br>
+PyPDF2 </br>
+sentence-transformers </br>
+supabase </br>
+langchain-core </br>
+langchain-groq </br>
+
+### Install the dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Run the Application
+```bash
+streamlit run app.py
+```
+
+## Deploy on Streamlit Community Cloud
+### Sign Up and Log In
+- Go to [Streamlit Community Cloud](https://streamlit.io/cloud) and sign up or log in. </br>
+
+## New Deployment
+- Click on "New app" in the dashboard.
+- Connect to your GitHub repository.
+- Select the branch and file (app.py).
+
+### Add Secrets
+- In the "Advanced Settings" section, click on "Manage Secrets".
+- Add your secrets in the format:
